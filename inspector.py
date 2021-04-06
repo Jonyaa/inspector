@@ -7,10 +7,6 @@ class Inspector:
         self.data = data
         self.inspections_results = {}
 
-    def register_inspection(self, inspection):
-        # assert isinstance(inspection, Inspection), 'inspection paramter must be an inspection func'
-        self.inspections.append(inspection)
-
     def inspect(self):
         for project in self.data:
             self.inspections_results[project['metadata']['name']] = {
